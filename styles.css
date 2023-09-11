@@ -87,15 +87,36 @@ header{
     width: 330px;
     height: 45px;
 }
-.btn-box a{
+.btn-box a.btn{
     display: inline-flex;
     height: 100%;
     width:150px;
     justify-content: center;
     align-items: center;
     background-color: #12f7ff;
+    color:whitesmoke;
     text-decoration: none;
     font-size: 20px;
+    transition: .6s;
+    border-radius: 10px;
+    position: relative ;
+    overflow: hidden;
+    z-index: 1;
+}
+a.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0c1022;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+
+}
+a.btn:hover::before{
+    width: 100%;
 }
 
 .social-icons{
@@ -105,8 +126,10 @@ header{
 
 }
 .social-icons a{
+    color: white;
     justify-content: space-between;
     padding: 12px;
+    border-radius: 5px;
 }
 .img-box{
     padding: 55px;
