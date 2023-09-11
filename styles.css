@@ -142,3 +142,48 @@ a.btn:hover::before{
     height: 400px;
     width: 500px;
 }
+
+
+.heading  {
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+
+}
+.heading h1{
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+
+}
+.about-me{
+    display: grid;
+    grid-template-columns: auto  auto;
+    
+}
+.about-left{
+margin-right: 10px;
+
+}
+.about-left img{
+    height: 450px;
+}
+.about-right {
+    margin-left: 35px;
+    margin-top: 30px;
+    background-color: #070a23;
+    padding: 15px;
+    margin-right: 60px;
+    font-size: 20px;
+    height: 400px;
+    border-radius: 35px;
+}
+.about-right p{
+    margin-top: 20px;
+    color: aliceblue;
+    justify-content: space-between;
+    line-height: 35px;
+    letter-spacing: 1.5px;
+
+    
+}
