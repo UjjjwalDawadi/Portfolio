@@ -203,7 +203,6 @@ margin-right: 10px;
     color:crimson;
     font-size: 20px;
     text-align: center;
-    width: 100%;
 }
 .service-container{
     margin-top: 50px;
@@ -222,7 +221,11 @@ margin-right: 10px;
     border-radius: 20px;
     text-align: center;
     color: aliceblue;
+    transition: all 0.5 ease;
 
+}
+.card:hover{
+    transform:scale(1.1);
 }
 .service-box img{
     margin-top: 25px;
@@ -244,3 +247,41 @@ margin-right: 10px;
     padding: 20px;
     text-align:center;
 }
+
+.max-width{
+    width: 100%;
+    margin: auto;
+}
+
+#skill h1{
+    margin-top: 90px;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+#skill h2{
+    margin-top: 35px;
+    color:crimson;
+    font-size: 20px;
+    text-align: center;
+}
+.skill .skill-content .column {
+    width: calc(50% - 20px);
+}
+.left {
+    margin-top: 30px;
+    color: aliceblue;
+    line-height: 35px;
+    letter-spacing: 2px;
+    margin-right: 0%;
+}
+.left h3{
+    font-size: 25px;
+    font-weight: bold;
+    color: #3cf;
+    margin-bottom: 20px;
+}
+
+
+
