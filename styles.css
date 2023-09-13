@@ -248,40 +248,119 @@ margin-right: 10px;
     text-align:center;
 }
 
-.max-width{
-    width: 100%;
-    margin: auto;
+#skill{
+    text-align:  center;
+    padding: 20px;
 }
-
 #skill h1{
     margin-top: 90px;
     font-size: 60px;
     color: white;
     font-weight: bold;
-    text-align: center;
 }
 #skill h2{
     margin-top: 35px;
     color:crimson;
     font-size: 20px;
-    text-align: center;
+
 }
-.skill .skill-content .column {
-    width: calc(50% - 20px);
+.skill-contents {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 .left {
     margin-top: 30px;
     color: aliceblue;
     line-height: 35px;
     letter-spacing: 2px;
-    margin-right: 0%;
+    margin-left: 20px;
+    width:50%;
+
 }
+
 .left h3{
     font-size: 25px;
     font-weight: bold;
     color: #3cf;
     margin-bottom: 20px;
 }
+.right{
+    
+    color: aliceblue;
+    line-height: 35px;
+    letter-spacing: 2px;
+    width: 56%;
+    padding:20px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
 
+/* CSS for skill bars */
+.column.right .bars {
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.column.right .bars .info {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+}
+.column.right .bars .line {
+    display: flex;
+    width: 100%;
+    background: white;
+    position: relative;
+    height: 6px;
+}
 
+.column.right .bars .line::before {
+    content: " ";
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: crimson;
+}
+
+.column.right .bars .HTML::before {
+    width: 90%;
+}
+
+.column.right .bars .CSS::before {
+    width: 70%;
+}
+
+.column.right .bars .JS::before {
+    width: 60%;
+}
+
+.column.right .bars .Mysql::before {
+    width: 85%;
+}
+
+.column.right .bars .Python::before {
+    width: 80%;
+}
+
+.column.right .bars .Java::before {
+    width: 90%;
+}
+
+.column.right .bars .line::after {
+    content: " ";
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: gray; 
+}
+
+.column.right .bars .line::after {
+    width: calc(100% - var(--percentage));
+}
