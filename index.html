@@ -17,14 +17,16 @@
      <!-- header design -->
         <header class="header">
             <a href="#" class="logo" >Ujjwal.</a>
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <a href="#home" class = "active">Home</a>
                 <a href="#about"    >About Me</a>
                 <a href="#service">Services</a>
                 <a href="#skill"   >Skills</a>
                 <a href="#contact"  >Contact</a>
             </nav>
-            <div id="menu-icon" class='bx bx-menu'></div>
+            <div  id="menu-icon">
+                <a href="#navbar"  class='bx bx-menu'></a>
+            </div>
         </header> 
     </section>
     <section class="home" id="home">
@@ -179,6 +181,9 @@
         <h1>Contact Me</h1>
         <h2><i class='bx bx-minus' style="color: aliceblue;">
         </i>Get in touch<i class='bx bx-minus' style="color: aliceblue;"></i></h2>
+        <div class="text">
+            <span>Reach out for opportunities or just to say hello</span>
+        </div>
         <div class="contact-container">
             <div class="column left">
                 <h4>Let's Get In Touch</h4>
@@ -193,9 +198,43 @@
                 </div>
 
             </div>
-        </div>
+            <div class="column right">
+                <h4>Contact Me</h4>
 
+                <form action="">
+                    <div class="input-box">
+                        <input type="text" class=" input" required>
+                        <label for="" class="name">Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" class="input" required>
+                        <label for="">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <textarea style="height: 150px;" name="" id="message" cols="30" rows="10" class="input" required></textarea>
+                        <label for="">Message</label>
+                    </div>
+                    <button class="btn">
+                        <span>Send</span>
+                        <i class='bx bxs-send'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </section>
+    <section class="footer" id="footer">
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p>Copyright  &copy; 2023 | All rights reserved.</p>
+                    <p>Designed by Ujjwal Dawadi</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
     <script src="script.js" ></script>
 </body>
 </html>

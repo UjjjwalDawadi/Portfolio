@@ -10,6 +10,7 @@
 body{
     background-color: #0c1022;
 }
+/* CSS for Header Section */
 header{
     background-color:transparent;
     top: 0;
@@ -19,22 +20,22 @@ header{
     justify-content: space-between;
     align-items: center;
     display: flex;
+}
 
- 
-}
-.navbar{
-    padding-right: 150px;
-    
-}
-.logo{
+.header .logo{
     text-decoration: none;
     color: rgb(224, 213, 213);
     font-weight: 1000;
     font-size: 30px;
     pointer-events: none;
+}
+
+.header .navbar{
+    padding-right: 150px;
     
 }
-.navbar a {
+
+.header .navbar a {
     text-decoration: none;
     color: rgb(212, 208, 208);
     font-weight: 600;
@@ -42,19 +43,26 @@ header{
     padding-right: 35px;
     font-size: 24px;
 }
-.navbar a.active,
-.navbar a:hover{
-    background: linear-gradient(45deg,#f06,#3cf);
+.header .navbar a.active,
+.header .navbar a:hover{
+    background: rgb(240, 34, 6);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
 }
-#menu-icon{
+.header #menu-icon{
     color: rgb(218, 10, 138);
     font-size: 30px;
     display: none;
     
 }
+@media (max-width: 768px) {
+    .header #menu-icon {
+        display: inline-block; /* Display the menu icon when the screen width is decreased */
+    }
+}
+
+/* CSS for Home Section */
 .home{
     min-height: 100vh;
     height: 100%;
@@ -81,14 +89,14 @@ header{
     max-width: 100%;
     line-height: 35px;
 }
-.btn-box{
+.home .btn-box{
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
     width: 330px;
     height: 45px;
 }
-.btn-box a.btn{
+.home .btn-box a.btn{
     display: inline-flex;
     height: 100%;
     width:150px;
@@ -104,7 +112,7 @@ header{
     overflow: hidden;
     z-index: 1;
 }
-a.btn::before{
+.home a.btn::before{
     content: "";
     position: absolute;
     top: 0;
@@ -116,7 +124,7 @@ a.btn::before{
     transition: .4s;
 
 }
-a.btn:hover::before{
+.home a.btn:hover::before{
     width: 100%;
 }
 
@@ -132,7 +140,7 @@ a.btn:hover::before{
     padding: 12px;
     border-radius: 5px;
 }
-.img-box{
+.home .img-box{
     padding: 55px;
     width: 90%;
     background-color:#070a23;
@@ -144,7 +152,7 @@ a.btn:hover::before{
     width: 500px;
 }
 
-
+/* CSS for About Section */
 #about h1{
     margin-top: 70px;
     text-align: center;
@@ -190,6 +198,7 @@ margin-right: 10px;
     letter-spacing: 2px;
 }
 
+/* CSS for Service Section */
 #service h1{
     margin-top: 90px;
     font-size: 60px;
@@ -249,6 +258,7 @@ margin-right: 10px;
 
 }
 
+/* CSS for Skill Section */
 #skill{
     text-align:  center;
     padding: 20px;
@@ -386,7 +396,7 @@ margin-right: 10px;
     width: calc(100% - var(--percentage));
 }
 
-
+/* CSS for Contact Section */
 #contact{
 text-align:  center;
 padding: 30px;
@@ -405,14 +415,35 @@ font-weight: bold;
     font-size: 20px;
 }
 
+#contact .text{
+    margin-top: 35px;
+    margin-left: 130px;
+    margin-right: 130px;
+    background-color: #070a23;
+    display: flex;
+    height: 50px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+#contact .text span{
+    font-size: 32px;
+    font-weight: bold;
+    color:#fbfbfc;
+    margin-left: 66px;
+    padding-left: 65px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+
+}
+
 .contact-container{
     margin-left: 130px;
     margin-right: 130px;
-    margin-top: 60px;
     background-color: #070a23;
     display: flex;
     border-radius: 25px;
-    overflow: hidden;
 }
 
 .column.left h4{
@@ -425,9 +456,10 @@ font-weight: bold;
 #contact .column.left{
     background-color: rgb(247, 248, 250);
     width: 50%;
+    border-radius: 15px;
 }
+
 #contact .social-icons{
-    /* margin-top: 18px; */
     font-size: 35px;
     display: flex;
     margin-left: 30px;
@@ -444,11 +476,111 @@ font-weight: bold;
     font-size: 20px;
     font-weight: bold;
     display: flex;
-    text-align: start;
     margin-left: 30px;
 }
 
 #contact .left img{
     height: 400px;
-    width: 500px;
+    width: 100%;
+    display: flex;
+}
+
+#contact .right h4{
+    font-size: 38px;
+    font-weight: bold;
+    color:#ffffff;
+    margin: 25px;
+    margin-left: 30px;
+}
+form{
+    padding: 0, 50px;
+    height: 100%;
+    width: 100%;
+}
+.input-box {
+    height:50px ;
+    width: 95%;
+    margin: 30px 0;
+    margin-left: 70px;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 25%;
+    left: 25px;
+    padding-left: 10px;
+    transform: translateY (-50%) ;
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+    transition: .3s;
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label{
+    top: -15px;
+    left: 10px;
+    background: crimson;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+
+.btn {
+    float: right;
+    top: 150px;
+    position: relative;
+    background: linear-gradient(45deg, #f06, rgb(10, 173, 228));
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    width: 40%;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    display: flex; 
+    align-items: center;
+
+}
+
+.btn span{
+    margin-left: 40px;
+}
+
+
+.btn i {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+.btn:hover {    
+    color: white;
+    transform: scale(1.05);
+}
+
+#send-icon {
+    martop: 120px;
 }
