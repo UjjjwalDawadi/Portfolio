@@ -10,6 +10,10 @@
 body{
     background-color: #0c1022;
 }
+section{
+    border-bottom: 1px solid white;
+
+}
 /* CSS for Header Section */
 header{
     background-color:transparent;
@@ -560,6 +564,10 @@ form{
     align-items: center;
 
 }
+.btn:hover {    
+    color: white;
+    transform: scale(1.05);
+}
 
 .btn span{
     margin-left: 40px;
@@ -571,16 +579,11 @@ form{
     font-size: 30px;
 }
 
-
-
-
-
-
-.btn:hover {    
+#footer p{
+    margin: 15px;
+    text-align: center;
     color: white;
-    transform: scale(1.05);
-}
+    font-size: 15px;
+    font-weight: bold;
 
-#send-icon {
-    martop: 120px;
 }
