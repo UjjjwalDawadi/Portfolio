@@ -5,18 +5,40 @@
              <meta charset="UTF-8">
              <meta http-equiv="X-UA-Compatible" content="IE=edge">
              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Ujjwal Dawadi</title>
-             <link rel="stylesheet" href="styles.css">
-
+            <title>Ujjwal | Developer</title>
+            <link rel="icon" href="images/title-icon.png">
+            <link rel="stylesheet" href="styles.css">
+            <script src="script.js"></script>
              <!-- Icons -->
              <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='bx bx-up-arrow-alt'></i></button>
+    <script>
+      //script for go to top button 
+        var mybutton = document.getElementById("myBtn");
+
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
 
     <section>
      <!-- header design -->
         <header class="header">
-            <a href="#" class="logo" >Ujjwal.</a>
+            <a href="#" class="logo" ><span class="logo-text">Ujjwal.</a></span>
             <nav class="navbar" id="navbar">
                 <a href="#home" class = "active">Home</a>
                 <a href="#about"    >About Me</a>
@@ -34,9 +56,9 @@
                 <a href="#skill">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
-  
         </header> 
     </section>
+    <!-- <button onclick="topFunction()" id="scroll-btn" title="Go to top">Top</button> -->
     <!-- Home Section Design -->
     <section class="home" id="home">
         <div class="home-content">
@@ -244,7 +266,5 @@
             </div>
         </footer>
     </section>
-
-    <script src="script.js" ></script>
 </body>
 </html>
