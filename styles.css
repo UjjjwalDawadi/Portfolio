@@ -12,8 +12,8 @@ body{
 }
 section{
     border-bottom: 1px solid white;
-
 }
+
 /* CSS for Header Section */
 header {
     background-color: transparent;
@@ -58,6 +58,10 @@ header {
     background: rgb(240, 34, 6);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+.fixed-header {
+    position: fixed;
+    background-color: #0c1022;
 }
 
 /* CSS for Menu Icon */
@@ -513,6 +517,7 @@ header {
     background: white;
     position: relative;
     height: 6px;
+    z-index: -1;
 }
 
 .column.right .bars .line::before {
@@ -837,3 +842,4 @@ form {
   #myBtn:hover {
     background-color: #555;
   }
+
