@@ -211,23 +211,23 @@
             </div>
             <div class="column right">
                 <h4>Contact Me</h4>
-
-                <form action="">
+            
+                <form action="mailto:ujjwaldawadi25@gmail.com" method="post" enctype="text/plain">
                     <div class="input-box">
-                        <input type="text" class=" input" required>
-                        <label for="" class="name">Name</label>
+                        <input type="text" class="input" name="Name" required pattern="[a-zA-Z\s]+" title="Only letters and spaces are allowed">
+                        <label for="Name">Name</label>
                     </div>
-
+            
                     <div class="input-box">
-                        <input type="text" class="input" required>
-                        <label for="">Email</label>
+                        <input type="email" class="input" name="Email" required>
+                        <label for="Email">Email</label>
                     </div>
-
+            
                     <div class="input-box">
-                        <textarea style="height: 150px;" name="" id="message" cols="30" rows="10" class="input" required></textarea>
-                        <label for="">Message</label>
+                        <textarea style="height: 150px;" name="Message" id="message" cols="30" rows="10" class="input" required></textarea>
+                        <label for="Message">Message</label>
                     </div>
-                    <button class="btn">
+                    <button class="btn" type="submit">
                         <span>Send</span>
                         <i class='bx bxs-send'></i>
                     </button>
