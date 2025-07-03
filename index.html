@@ -8,7 +8,6 @@
             <title>Ujjwal | Developer</title>
             <link rel="icon" href="images/title-icon.png">
             <link rel="stylesheet" href="styles.css">
-
              <!-- Icons -->
              <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         </head>
@@ -41,6 +40,7 @@
     <!-- Home Section Design -->
     <section class="home" id="home">
         <div class="home-content">
+            
             <h1>Hi! I'm <span style="color: crimson;"> Ujjwal </span></h1>
             <p>And I am a Student and a</p>
             <p>Developer from Nepal.</p>
@@ -48,10 +48,20 @@
                 developer into crafting innovative solutions and 
                 transforming ideas into captivating  experiences.</h2>
         
-            <div class="btn-box" >
-                <a href="#" >Download CV</a>
-                <a href="#contact">Hire Me</a>
-            </div>
+                <div class="btn-box">
+                    <!-- Button to toggle PDF resume -->
+                    <a href="javascript:void(0);" onclick="toggleResume()" >View Resume</a>
+                  
+                    <div id="resumeViewer" >
+                        <button class="exit-btn"><i class='bx  bx-x'   onclick="toggleResume()"></i> </button>
+                      <iframe src="resume.pdf" ></iframe>
+                    </div>
+                    <!-- Existing "Hire Me" link -->
+                    <a href="#contact">Hire Me</a>
+                  </div>
+                  
+                 
+                  
 
             <div class="social-icons">
                 <a href="https://www.facebook.com/ujjjwaldawadi" ><i class='bx bxl-facebook-circle'></i> </a>

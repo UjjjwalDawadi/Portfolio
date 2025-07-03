@@ -6,8 +6,9 @@ function toggleVerticalMenu() {
         verticalMenu.style.display = "block";
     }
 }
-
-
+function toggleResume () {
+    document.getElementById('resumeViewer').classList.toggle('open');
+  }
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
@@ -67,6 +68,7 @@ $(document).ready(function () {
         $("#vertical-menu").toggle();
     });
 });
+
 
 
 
