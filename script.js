@@ -26,6 +26,26 @@ function scrollFunction() {
   }
 }
 
+function Send() {
+    var params = {
+        from_name: document.getElementById("Name").value,
+        email_id: document.getElementById("Email").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_ogmxu4q", "template_vtr6xqn", params)
+        .then(function (res) {
+            console.log("Success! " + res.status);
+            alert("Success! " + res.status);
+        })
+        .catch(function (error) {
+            console.log("Failed to send email. Error: ", error);
+            alert("Failed to send email. Please try again.");
+        });
+
+    return false;
+}
+
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -47,6 +67,8 @@ $(document).ready(function () {
         $("#vertical-menu").toggle();
     });
 });
+
+
 
 
 
