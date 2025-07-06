@@ -27,24 +27,32 @@ function scrollFunction() {
   }
 }
 
-function Send() {
-    var params = {
-        from_name: document.getElementById("Name").value,
-        email_id: document.getElementById("Email").value,
-        message: document.getElementById("message").value
+ function Send(e) {
+    e.preventDefault();                      
+
+    const btn   = document.getElementById("sendBtn");
+  const form  = e.target;                    // #contact-form
+
+  btn.classList.add("loading");
+    const params = {
+      from_name: e.target.Name.value,
+      email_id: e.target.Email.value,
+      message: e.target.Message.value
     };
 
-    emailjs.send("service_ogmxu4q", "template_vtr6xqn", params)
-        .then(function (res) {
-            console.log("Success! " + res.status);
-            alert("Success! " + res.status);
-        })
-        .catch(function (error) {
-            console.log("Failed to send email. Error: ", error);
-            alert("Failed to send email. Please try again.");
-        });
-
-    return false;
+    emailjs
+      .send("service_ogmxu4q", "template_vtr6xqn", params)
+      .then(res => {
+        alert("Message sent!");               
+        e.target.reset();                    
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Failed to send email. Please try again.");
+      })
+      .finally(() => {
+      btn.classList.remove("loading");
+    });
 }
 
 function topFunction() {
@@ -53,7 +61,7 @@ function topFunction() {
 }
 
 window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.header');
+const navbar = document.querySelector('.header');
   const firstSection = document.querySelector('#home');
   
   if (window.scrollY >= firstSection.offsetHeight) {
